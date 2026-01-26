@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box 0;
+  box-sizing: border-box ;
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -63,6 +63,7 @@ header {
 .header-wrapper {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .header-left .logo {
   font-size: 24px;
@@ -73,13 +74,107 @@ header {
   column-gap: 30px;
   align-items: center;
 }
-.menu-link {
+.header-right .header-right-links {
+  display: flex;
+  align-items: center;
+  column-gap: 16px;
+}
+.header-right .bi-person {
+  font-size: 23px;
+}
+.toggle-button {
+  border: none;
+  background-color: transparent;
+}
+.header-right i {
+  font-size: 18px;
+  display: flex;
+}
+.header-right .header-card-link i {
+  font-size: 18px;
+  display: flex;
+}
+
+.header-right .header-card {
+  position: relative;
+}
+.header-right .header-card-link .header-card-count {
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  width: 16px;
+  height: 16px;
+  background-color: #1367ef;
+  color: white;
+  font-size: 10px;
+  text-align: center;
+  border-radius: 100%;
+  font-weight: 600;
+}
+.header-center .menu-list .menu-link {
   font-size: 14px;
   font-weight: 500;
   text-transform: uppercase;
   letter-spacing: 1.2px;
+  position: relative;
+}
+.header-center .menu-list .menu-link::after{
+  position: absolute;
+  content: "";
+  width: 0px;
+  height: 1px;
+  background-color: #1367ef;
+  bottom: -2px;
+  left: 50%;
+  transform: translate(-50%);
+  transition: .2s ease width;
+}
+.menu-list .menu-link.active::after{
+  width: 100%;
+}
+.menu-list-item:hover .menu-link::after{
+  width: 100%;
+}
+ .header-center .menu-list .menu-list-item{
+  display: flex;
+  height: 90px;
+  position: relative;
+  align-items: center;
 }
 .menu-list i {
   font-size: 12px;
 }
+
+/* ? Menu dropdown start */
+header .menu-dropdown-content{
+  position: absolute;
+  top: 100%;
+  left: -30px;
+  display: flex;
+  flex-direction: column;
+  padding: 18px 0;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .2s ease;
+}
+.menu-dropdown-content{
+  width: 220px;
+  background-color: #fff;
+  border: 1px solid #dee0ea;
+}
+header .menu-dropdown-content a{
+  display: flex;
+  padding: 4px 30px;
+  transition: color .2s ease;
+}
+header .menu-dropdown-content a:hover{
+  color: #1367ef;
+}
+.header-center .menu-list .menu-list-item:hover .menu-dropdown-content{
+  opacity: 100%;
+  visibility: visible;
+}
+  
+/* ? Menu dropdown end*/
+
 /* ! Header end */
