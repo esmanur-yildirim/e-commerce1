@@ -3,7 +3,7 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box ;
+  box-sizing: border-box;
   font-family: "Jost", sans-serif;
   font-optical-sizing: auto;
   font-weight: 400;
@@ -31,6 +31,61 @@ h6,
 p {
   margin: 0;
 }
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.logo {
+  font-size: 24px;
+  font-weight: 500;
+  display: flex;
+}
+button {
+  margin-top: 20px;
+  padding: 25px;
+  line-height: 40px;
+  cursor: pointer;
+  border: none;
+}
+.btn {
+  display: inline-block;
+  padding: 0 25px;
+  border: 1px solid black;
+  font-weight: 500;
+  transition: .2s ease all;
+}
+.btn-primary {
+  background-color: #1367ef;
+  color: #fff;
+  border-color: #1367ef;
+}
+.btn-primary:hover {
+  background-color: #fff;
+  color: #1367ef;
+  border-color: #1367ef;
+}
+.btn-sm {
+  line-height: 33px;
+}
+
+.btn-lg{
+  line-height: 45px;
+}
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="number"]{
+  outline: none;
+  border: 1px solid #dee0ea;
+  padding: 8px 8px 8px 15px;
+}
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="email"]:focus,
+input[type="number"]:focus{
+border-color: gray;
+}
 
 /* ! Base end */
 
@@ -38,17 +93,14 @@ p {
 
 header {
   border-bottom: 1px solid #dee0ea;
+  position: relative;
 }
 .header-row {
   height: 90px;
   display: flex;
   align-items: center;
 }
-.container {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
+
 .global-notification {
   background-color: #1367ef;
   padding: 14px;
@@ -65,10 +117,7 @@ header {
   justify-content: space-between;
   align-items: center;
 }
-.header-left .logo {
-  font-size: 24px;
-  font-weight: 500;
-}
+
 .header-center .navigation .menu-list {
   display: flex;
   column-gap: 30px;
@@ -118,7 +167,7 @@ header {
   letter-spacing: 1.2px;
   position: relative;
 }
-.header-center .menu-list .menu-link::after{
+.header-center .menu-list .menu-link::after {
   position: absolute;
   content: "";
   width: 0px;
@@ -127,15 +176,16 @@ header {
   bottom: -2px;
   left: 50%;
   transform: translate(-50%);
-  transition: .2s ease width;
+  transition: 0.2s ease width;
 }
-.menu-list .menu-link.active::after{
+
+.menu-list .menu-link.active::after {
   width: 100%;
 }
-.menu-list-item:hover .menu-link::after{
+.menu-list-item:hover .menu-link::after {
   width: 100%;
 }
- .header-center .menu-list .menu-list-item{
+.header-center .menu-list .menu-list-item {
   display: flex;
   height: 90px;
   position: relative;
@@ -146,7 +196,7 @@ header {
 }
 
 /* ? Menu dropdown start */
-header .menu-dropdown-content{
+header .menu-dropdown-wrapper {
   position: absolute;
   top: 100%;
   left: -30px;
@@ -155,26 +205,75 @@ header .menu-dropdown-content{
   padding: 18px 0;
   opacity: 0;
   visibility: hidden;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
+  z-index: 10;
 }
-.menu-dropdown-content{
+.menu-dropdown-content {
   width: 220px;
   background-color: #fff;
   border: 1px solid #dee0ea;
+  padding: 18px 0;
 }
-header .menu-dropdown-content a{
+
+header .menu-dropdown-wrapper a {
   display: flex;
   padding: 4px 30px;
-  transition: color .2s ease;
+  font-size: 14px;
+  transition: color 0.2s ease;
 }
-header .menu-dropdown-content a:hover{
+
+header .menu-dropdown-wrapper a:hover {
   color: #1367ef;
 }
-.header-center .menu-list .menu-list-item:hover .menu-dropdown-content{
-  opacity: 100%;
+
+/* Hover olunca GÖSTER */
+.header-center .menu-list .menu-list-item:hover .menu-dropdown-wrapper {
+  opacity: 1;
   visibility: visible;
 }
-  
-/* ? Menu dropdown end*/
+
+.menu-dropdown-megamenu {
+  border: 1px solid #dee0ea;
+  background-color: white;
+  display: flex;
+  padding: 22px;
+  column-gap: 50px;
+}
+.megamenu-wrapper .menu-dropdown-wrapper {
+  left: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+.megamenu-wrapper {
+  position: static !important;
+}
+.megamenu-wrapper .megamenu-links {
+  display: flex;
+  column-gap: 50px;
+}
+.megamenu-wrapper .megamenu-links .megamenu-products-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+.megamenu-single {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.megamenu-wrapper .megamenu-menu-list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 2px;
+}
+.megamenu-wrapper .megamenu-menu-list a {
+  font-size: 14px;
+}
+.megamenu-wrapper .megamenu-single-title {
+  font-size: 18px;
+  font-weight: 500;
+}
+/* ? Menu dropdown end */
 
 /* ! Header end */
