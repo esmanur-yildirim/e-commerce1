@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Jost&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@100;200;300;400;500;600;700;800&display=swap");
 /* ! Base start */
 * {
   margin: 0;
@@ -16,7 +16,9 @@ ol {
   padding: 0;
   list-style: none;
 }
-
+body{
+  overflow-x: hidden;
+}
 a {
   text-decoration: none;
   color: black;
