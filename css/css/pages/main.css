@@ -7,5 +7,10 @@
 @import url(../components/slider.css);
 @import url(../components/category-item.css);
 @import url(../components/product-item.css);
+@import url(../components/campaign-item.css);
+@import url(../components/blog-item.css);
+@import url(../components/brand-item.css);
+@import url(../components/campaign-single.css);
+
 /* ! Categories */
 @import url(home.css);
