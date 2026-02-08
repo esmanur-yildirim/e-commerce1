@@ -10,6 +10,7 @@
 .cart-page .cart-form{
     flex-basis: 60%;
 }
+
 .cart-page .free-progress-bar{
     border: 1px solid #dee0ea;
     padding: 20px;
@@ -41,12 +42,16 @@
   .cart-form table img{
     width: 60px;
   }
+  .cart-form .shop-table-wrapper{
+    overflow-x: auto;
+}
   .cart-form table > :not(caption)> * > * {
     padding: 8px 0;
   }
   .cart-form table{
     border-collapse: collapse;
     width: 100%;
+    min-width: 595px;
   }
   .cart-form table thead th{
     text-align: start;
@@ -108,5 +113,73 @@
    }
 /* ? actions end */
 
+/* ? collaterals start */
+
+ .cart-collaterals{
+    flex: 0 0 300px;
+    border: 1px solid #dee0ea;
+    padding: 30px;
+ }
+  .cart-collaterals table{
+    width: 100%;
+    border-collapse: collapse;
+ }
+  .cart-collaterals h2{
+   font-weight: 500;
+   font-size: 16px;
+   padding-bottom: 15px;
+   border-bottom: 1px solid #dee0ea;
+ }
+ .cart-collaterals table * {
+    font-size: 14px;
+    font-weight: 400;
+ }
+ .cart-collaterals table tr:not(:last-child){
+    border-bottom: 1px solid #dee0ea;
+ }
+ .cart-collaterals table th{
+    text-align: start;
+    padding: 20px 0 10px 0;
+ }
+  .cart-collaterals table td{
+    text-align: end;
+    padding: 20px 0 10px 0;
+ }
+ .cart-collaterals table ul{
+    display: flex;
+    flex-direction: column;
+    row-gap: 10px;
+ }
+ .cart-collaterals table ul label{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    column-gap: 5px;
+ }
+ .cart-collaterals table ul a{
+    color: #ee403d;
+    font-weight: 500;
+ }
+ .cart-collaterals table strong{
+    font-size: 18px;
+    font-weight: 700;
+ }
+  .cart-collaterals button{
+    margin-top: 30px;
+    background-color: #ee403d;
+    color: white;
+    border-color: #ee403d;
+    width: 100%;
+ }
+/* ? collaterals end */
+
 
 /* ! cart form end */
+
+/* responsive */
+@media(max-width:992px){
+    .cart-page-wrapper{
+        flex-direction: column;
+        row-gap: 30px;
+    }
+}
