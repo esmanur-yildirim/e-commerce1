@@ -17,9 +17,13 @@
 @import url(single-product.css);
 @import url(../pages/single-product/product-gallery.css);
 @import url(single-product/product-info.css);
+@import url(single-product/product-tab.css);
+@import url(single-product/reviews.css);
 
 /* ! Categories */
 @import url(home.css);
 @import url(contact.css);
 @import url(account.css);
 @import url(cart.css);
+@import url(blog.css);
+@import url(single-blog.css);

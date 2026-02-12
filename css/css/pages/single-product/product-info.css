@@ -47,6 +47,7 @@
 }
 .site-main .colors .colors-wrapper{
     display: flex;
+    margin-left: -2px;
 }
 .site-main .colors .colors-label{
     font-size: 14px;
@@ -117,6 +118,8 @@
     font-size: 14px;
     cursor: pointer;
     transition: .2s ease all;
+    flex: 1;
+    text-align: center;
 }
 .site-main .values .values-list span:hover{
     background-color: #e51414;
@@ -174,9 +177,7 @@
         margin-top: 30px;
     }
     .site-main .values-list span{
-        flex: 1;
         padding: 6px !important;
-        text-align: center;
         display: inline-block;
     }
    }
